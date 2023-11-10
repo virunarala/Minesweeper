@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Minesweeper</string>
+    <string name="cell">Cell</string>
+    <string name="mine">Mine</string>
+    <string name="flag">Flag</string>
+    <string name="game_over">Game Over!</string>
+    <string name="play_again">Play Again</string>
+    <string name="play">Play</string>
+    <string name="hint_total_mines">Total Mines</string>
+    <string name="invalid_mines">Enter a number between %1$d and %2$d</string>
+    <string name="game_won">You won! Congratulations, it\'s time to celebrate!</string>
 </resources>
