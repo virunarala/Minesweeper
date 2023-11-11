@@ -23,8 +23,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
@@ -57,7 +59,7 @@ fun BoardScreen(
                         horizontalAlignment = Alignment.CenterHorizontally,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .background(Color.White)
+                            .background(color = colorResource(R.color.surface))
                             .padding(dimensionResource(id = R.dimen.padding_medium))
                             .clip(RoundedCornerShape(16.dp))
                     ) {
@@ -68,6 +70,7 @@ fun BoardScreen(
                                 viewModel.totalMines.value =newValue
                             },
                             maxLines = 1,
+                            textStyle = TextStyle(color = colorResource(id = R.color.text_color)),
                             keyboardOptions = KeyboardOptions(
                                 keyboardType = KeyboardType.NumberPassword,
                                 imeAction = ImeAction.Go
@@ -91,7 +94,9 @@ fun BoardScreen(
                             }
 
                         }) {
-                            Text(text = stringResource(id = R.string.play).uppercase())
+                            Text(
+                                text = stringResource(id = R.string.play).uppercase()
+                            )
                         }
                     }
                 }
@@ -109,11 +114,15 @@ fun BoardScreen(
                         horizontalAlignment = Alignment.CenterHorizontally,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .background(Color.White)
+                            .background(color = colorResource(R.color.surface))
                             .padding(dimensionResource(id = R.dimen.padding_medium))
                             .clip(RoundedCornerShape(16.dp))
                     ) {
-                        Text(text = stringResource(id = R.string.game_over), fontSize = 32.sp)
+                        Text(
+                            text = stringResource(id = R.string.game_over),
+                            fontSize = 32.sp,
+                            color = colorResource(id = R.color.text_color)
+                        )
                         Spacer(modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_medium)))
                         Button(onClick = { viewModel.restartGame() }) {
                             Text(text = stringResource(id = R.string.play_again).uppercase())
@@ -131,11 +140,15 @@ fun BoardScreen(
                         horizontalAlignment = Alignment.CenterHorizontally,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .background(Color.White)
+                            .background(color = colorResource(R.color.surface))
                             .padding(dimensionResource(id = R.dimen.padding_medium))
                             .clip(RoundedCornerShape(16.dp))
                     ) {
-                        Text(text = stringResource(id = R.string.game_won), fontSize = 20.sp)
+                        Text(
+                            text = stringResource(id = R.string.game_won),
+                            fontSize = 20.sp,
+                            color = colorResource(id = R.color.text_color)
+                        )
                         Spacer(modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_medium)))
                         Button(onClick = { viewModel.restartGame() }) {
                             Text(text = stringResource(id = R.string.play_again).uppercase())
@@ -146,7 +159,8 @@ fun BoardScreen(
         }
 
         Board(
-            board,
+            board = board,
+            modifier = modifier,
             onCellClick = { cell, row, col ->
                 viewModel.onCellClicked(row,col)
             },

@@ -3,10 +3,20 @@
     <string name="cell">Cell</string>
     <string name="mine">Mine</string>
     <string name="flag">Flag</string>
+    <string name="help">Help</string>
+    <string name="ok">Ok</string>
     <string name="game_over">Game Over!</string>
     <string name="play_again">Play Again</string>
     <string name="play">Play</string>
     <string name="hint_total_mines">Total Mines</string>
     <string name="invalid_mines">Enter a number between %1$d and %2$d</string>
     <string name="game_won">You won! Congratulations, it\'s time to celebrate!</string>
+    <string name="how_to_play">How to play Minesweeper</string>
+    <string name="game_help">A rectangular board is divided into a grid of squares.
+    Some of the squares contain mines, while the others are empty.
+    The goal of the game is to reveal all of the empty squares without detonating any of the mines.
+    Each square has a number on it, which indicates how many mines are adjacent to it.
+    A player can click on a square to reveal it, or long-click on a square to flag it as a suspected mine.
+    If a player clicks on a mine, the game ends and the player loses.
+    If a player reveals all of the empty squares, the player wins.</string>
 </resources>

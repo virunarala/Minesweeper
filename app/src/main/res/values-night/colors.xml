@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="surface">#3B3B3B</color>
+    <color name="text_color">@color/white</color>
+    <color name="cell_edge_color">@color/dark_gray</color>
+    <color name="cell_background">@color/dark_gray</color>
+    <color name="icon_color">@color/white</color>
+    <color name="icon_color_alt">@color/black</color>
+</resources>
