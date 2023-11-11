@@ -1,6 +1,9 @@
 # Minesweeper
 The classic Minesweeper game, now on Android!
 
+# Installation
+Go to the Releases section to find a downloadable apk
+
 ## How to play
 - A rectangular board is divided into a grid of squares.
 - Some of the squares contain mines, while the others are empty.
